@@ -726,7 +726,7 @@ func getPandocContent(ctx *RenderingContext) []byte {
 			"                 Leaving pandoc content unrendered.")
 		return ctx.Content
 	}
-	args := []string{"--mathjax"}
+	args := []string{"--mathjax", "--from=org"}
 	return externallyRenderContent(ctx, path, args)
 }
 
